@@ -1,0 +1,212 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    overflow:hidden;
+    font-family:'Poppins', sans-serif;
+    background-color:rgb(6, 0, 41);
+}
+
+section{
+    display: flex;
+}
+
+.container, .poly{
+    height: 810px;
+}
+
+.container{
+    width: 60%;
+    clip-path: circle(74.0% at 24% 43%);
+    position:absolute;
+    background-image: url("USTP.jpg");
+    background-size: cover;
+    filter: blur(10px);
+  
+}
+
+.poly{
+    width: 60.6%;
+    clip-path: circle(74.0% at 24% 43%);
+    position:absolute;
+    background-color:#ffffff;
+    z-index:-2;
+}
+
+.ustep{
+    z-index:3;
+    position:absolute;
+    width: 580px;
+    height: 150px;
+    top:210px;
+    left:23px;
+    filter: drop-shadow(3px 3px 3px rgb(0, 0, 0));
+}
+
+.form{
+    background-color: rgb(255, 255, 255);
+    position:absolute;
+    left: 78%; 
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index:10;  
+    width:450px;
+    height:460px;
+    overflow:hidden;
+    display:flex;
+    flex-direction: column;
+    word-spacing:10px;
+    font-size:15px;
+    color:rgb(0, 0, 0);
+    border-radius: 55px;
+    background: #f2f2f2;
+    box-shadow: inset -7px -7px 3px #000000,
+            inset 7px 7px 3px #ffffff;  
+}
+
+.USTP{
+    text-align: center;
+}
+
+.inputs{
+    margin-left:15px;
+}
+
+input[type=text], input[type=password]{
+    border: none;
+    background-color:rgb(11, 0, 76);
+    border-radius:55px;
+    height:60px;
+    width:23rem;
+    margin-left:20px;
+    margin-top:5%;
+    outline:none;
+    color: white;
+    text-align:center;  
+    font-family:'Poppins',sans-serif;
+    font-size:18px;
+}
+input[type=text]{
+    margin-top:3%;
+    background-image: url(email.png);
+    background-size:30px;
+    background-repeat: no-repeat;
+    background-position:91% 50%;
+}
+
+input[type=password]{
+    background-image: url(lock.png);
+    background-size:30px;
+    background-repeat: no-repeat;
+    background-position:90% 50%;
+
+}
+.username, .pass{
+    font-size:15px;
+    transition: all 0.3s ease;
+    cursor:auto;
+    color: gray;
+    left:55px;
+    position:absolute;
+}
+
+.username{
+    top: 138px;
+}
+
+.pass{
+    top:220px;
+}
+
+input[type=text]:focus ~ .username,
+input[type=text]:valid ~ .username,
+input[type=password]:focus ~ .pass,
+input[type=password]:valid ~ .pass{
+    transform: translateY(-15px);
+}
+
+input[type=checkbox]{
+    margin-left:30px;
+    margin-top: 20px;
+    accent-color:black; 
+    
+}
+
+
+input[type=submit]{
+    background-color:rgb(11, 0, 76);
+    padding:15px;
+    margin-top:6%;
+    border-style:none;
+    border-radius:50px;
+    width:300px;
+    color:white;
+    font-size:15px;
+    font-family:'Poppins', sans-serif;
+    cursor: pointer;
+    margin-left:14%;
+    transition: transform .2s;
+}
+
+input[type=submit]:hover{
+    transition: all 0.3s ease;
+    transform:scale(1.1);
+}
+
+
+a{
+    text-decoration:none;
+    color:rgb(255, 157, 0);
+    transition: all 0.2s ease;
+}
+
+.forgot{
+    text-align:center;
+    
+}
+
+a:hover{
+    color:rgb(11, 0, 76);
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 430px) {
+    body{
+        overflow:hidden;
+    
+    }
+    .form{
+        position:absolute;
+        top:420px;
+        bottom: 20%;
+        left: 215px;
+        border-radius:0;
+        height: 500px;
+        box-shadow: none;
+    }
+
+    .ustep{
+        position: absolute;
+        left: 3px;
+        top: 25px;
+        width: 400px;
+        height: 100px;
+    }
+    .poly{
+        display: none;
+    }
+
+    .container{
+        clip-path:none;
+        width:440px ;
+        height: 500px;
+        background-position:center;
+        position: absolute;
+        overflow: hidden;
+    }
+
+
+}
