@@ -19,7 +19,7 @@ section{
 }
 
 .container{
-    width: 80em;
+    width: 60%;
     clip-path: circle(74.0% at 24% 43%);
     position:absolute;
     background-image: url("USTP.jpg");
